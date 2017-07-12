@@ -27,7 +27,12 @@ public class AndroidUtils {
     }
 
     public static boolean hasNotificationAccess(Context context) {
-        return Settings.Secure.getString(context.getContentResolver(),"enabled_notification_listeners").contains(context.getPackageName());
+        try {
+            return Settings.Secure.getString(context.getContentResolver(), "enabled_notification_listeners").contains(context.getPackageName());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public static void requestNotificationAccess(Context context) {

@@ -75,7 +75,7 @@
         android:id="@+id/textView_secs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="1.0s"
         tools:text="0.3s"
         android:textStyle="bold"
         android:textSize="18sp"
